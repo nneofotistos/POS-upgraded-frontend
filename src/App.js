@@ -10,7 +10,7 @@ import {
 // components
 import MenuPage from "./components/MenuPage";
 import LandingPage from "./components/LandingPage";
-import Cards from './components/Cards';
+// import Cards from './components/Cards';
 
 class App extends Component {
   render() {
@@ -20,7 +20,7 @@ class App extends Component {
         <Routes>
          <Route path="/" element={<LandingPage />}/>
          <Route path="/MainMenu" element={<MenuPage />}/>
-          <Route path="/Cards" element={<Cards />}/>
+          {/* <Route path="/Cards" element={<Cards />}/> */}
          </Routes>
        </div>
      </Router>
