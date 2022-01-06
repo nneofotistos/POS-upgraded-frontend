@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import('./Cards.css');
+import('./cards.css');
 
 class Cards extends Component {
     constructor(props) {
@@ -9,37 +9,37 @@ class Cards extends Component {
 
     render() {
         return (
-            <div>
-                <nav class="navbar">
-                    <div class="container">
-                        <div class="navbar-brand">
-                            <a class="navbar-item" href="#">
+            <>
+                <nav className="navbar">
+                    <div className="container">
+                        <div className="navbar-brand">
+                            <a className="navbar-item" href="#">
                                 <img src="https://cdn.emk.dev/templates/bulma-logo-light.png" alt="Logo"></img>
                             </a>
-                            <div class="navbar-burger burger" data-target="navbarMenu">
+                            <div className="navbar-burger burger" data-target="navbarMenu">
                                 <span></span>
                                 <span></span>
                                 <span></span>
                             </div>
                         </div>
-                        <div id="navbarMenu" class="navbar-menu">
-                            <div class="navbar-end">
-                                <a class="navbar-item is-active">
+                        <div id="navbarMenu" className="navbar-menu">
+                            <div className="navbar-end">
+                                <a className="navbar-item is-active">
                                     Home
                                 </a>
-                                <a class="navbar-item">
+                                <a className="navbar-item">
                                     Examples
                                 </a>
-                                <a class="navbar-item">
+                                <a className="navbar-item">
                                     Features
                                 </a>
-                                <a class="navbar-item">
+                                <a className="navbar-item">
                                     Team
                                 </a>
-                                <a class="navbar-item">
+                                <a className="navbar-item">
                                     Archives
                                 </a>
-                                <a class="navbar-item">
+                                <a className="navbar-item">
                                     Help
                                 </a>
                             </div>
@@ -47,39 +47,39 @@ class Cards extends Component {
                     </div>
                 </nav>
 
-                <div class="container">
-                    <div class="section">
-                        <div class="columns">
-                            <div class="column has-text-centered">
-                                <h1 class="title" style="color: ghostwhite;">Bulma Card Layout Template</h1><br></br>
+                <div className="container">
+                    <div className="section">
+                        <div className="columns">
+                            <div className="column has-text-centered">
+                                <h1 className="title" style="color: ghostwhite;">Bulma Card Layout Template</h1><br></br>
                             </div>
                         </div>
-                        <div id="app" class="row columns is-multiline">
-                            <div v-for="card in cardData" key="card.id" class="column is-4">
-                                <div class="card-large">
-                                    <div class="card-image">
-                                        <figure class="image is-16by9">
+                        <div id="app" className="row columns is-multiline">
+                            <div v-for="card in cardData" key="card.id" className="column is-4">
+                                <div className="card-large">
+                                    <div className="card-image">
+                                        <figure className="image is-16by9">
                                             <img src="card.image" alt="Image"></img>
                                         </figure>
                                     </div>
-                                    <div class="card-content">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <figure class="image is-48x48">
+                                    <div className="card-content">
+                                        <div className="media">
+                                            <div className="media-left">
+                                                <figure className="image is-48x48">
                                                     <img src="card.avatar" alt="Image"></img>
                                                 </figure>
                                             </div>
-                                            <div class="media-content">
-                                                <p class="title is-4 no-padding">{ card.user.title }</p>
+                                            <div className="media-content">
+                                                <p className="title is-4 no-padding">{ this.card.user.title }</p>
                                                 <p>
-                                                    <span class="title is-6">
-                                                        <a href="http://twitter.com/${card.user.handle}"> { card.user.handle } </a> </span> </p>
-                                                <p class="subtitle is-6">{ card.user.title }</p>
+                                                    <span classNameName="title is-6">
+                                                        <a href="http://twitter.com/${card.user.handle}"> { this.card.user.handle } </a> </span> </p>
+                                                <p className="subtitle is-6">{ this.card.user.title }</p>
                                             </div>
                                         </div>
-                                        <div class="content">
-                                            { card.content }
-                                            <div class="background-icon"><span class="icon-twitter"></span></div>
+                                        <div className="content">
+                                            { this.card.content }
+                                            <div className="background-icon"><span className="icon-twitter"></span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -87,14 +87,14 @@ class Cards extends Component {
                         </div>
                     </div>
                 </div>
-                <footer class="footer">
-                    <div class="container">
-                        <div class="content has-text-centered">
-                            <div class="soc">
-                                <a href="#"><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-youtube fa-lg" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+                <footer className="footer">
+                    <div className="container">
+                        <div className="content has-text-centered">
+                            <div className="soc">
+                                <a href="#"><i className="fa fa-github-alt fa-lg" aria-hidden="true"></i></a>
+                                <a href="#"><i className="fa fa-youtube fa-lg" aria-hidden="true"></i></a>
+                                <a href="#"><i className="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+                                <a href="#"><i className="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
                             </div>
                             <p>
                                 <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>.
@@ -103,8 +103,9 @@ class Cards extends Component {
                         </div>
                     </div>
                 </footer>
-                <script src="../js/cardsData.js"></script>
-            </div>
+                <script src="./cardsData.js"></script>
+                
+            </>
         );
     };
 };
